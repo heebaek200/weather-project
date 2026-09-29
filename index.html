@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 인간이 밖에 나가도 되는가</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="story-background" aria-hidden="true">
+        <div class="weather-effects">
+            <span class="sun-effect"></span>
+            <span class="moon-effect"></span>
+
+            <div class="cloud-field">
+                <span class="weather-cloud cloud-one"></span>
+                <span class="weather-cloud cloud-two"></span>
+                <span class="weather-cloud cloud-three"></span>
+            </div>
+
+            <div class="rain-field">
+                <span class="rain-drop"></span>
+                <span class="rain-drop"></span>
+                <span class="rain-drop"></span>
+                <span class="rain-drop"></span>
+                <span class="rain-drop"></span>
+                <span class="rain-drop"></span>
+                <span class="rain-drop"></span>
+                <span class="rain-drop"></span>
+                <span class="rain-drop"></span>
+                <span class="rain-drop"></span>
+            </div>
+
+            <div class="snow-field">
+                <span class="snowflake">❄</span>
+                <span class="snowflake">❅</span>
+                <span class="snowflake">❆</span>
+                <span class="snowflake">❄</span>
+                <span class="snowflake">❅</span>
+                <span class="snowflake">❆</span>
+                <span class="snowflake">❄</span>
+                <span class="snowflake">❅</span>
+                <span class="snowflake">❆</span>
+                <span class="snowflake">❄</span>
+            </div>
+
+            <div class="fog-field">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <span class="lightning-effect"></span>
+        </div>
+
+        <span class="floating-earth">🌍</span>
+        <span class="floating-earth">🌎</span>
+        <span class="floating-earth">🌏</span>
+        <span class="floating-sparkle sparkle-one">✦</span>
+        <span class="floating-sparkle sparkle-two">✧</span>
+    </div>
+
+    <main class="weather-app">
+        <header class="app-header">
+            <p class="app-eyebrow">🌤️ 오늘의 바깥 이야기</p>
+            <h1>오늘 인간이 밖에 나가도 되는가</h1>
+            <p class="app-description">지역을 알려주면 하늘의 이야기를 살펴볼게요.</p>
+        </header>
+
+        <form id="weather-form" class="search-form">
+            <label for="city-input">지역명</label>
+            <div class="search-controls">
+                <input
+                    id="city-input"
+                    name="city"
+                    type="search"
+                    placeholder="예: 부산, 김해시, 양산시"
+                    autocomplete="off"
+                >
+                <button id="search-button" type="submit">날씨 조회</button>
+            </div>
+        </form>
+
+        <p id="status-message" class="status-message" aria-live="polite"></p>
+
+        <section
+            id="weather-result"
+            class="weather-result"
+            aria-label="현재 날씨 조회 결과"
+            aria-live="polite"
+            hidden
+        ></section>
+    </main>
+</body>
+</html>
