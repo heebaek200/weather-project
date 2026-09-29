@@ -535,7 +535,7 @@ button:disabled {
 .weather-result {
     margin-top: 10px;
     padding-top: 12px;
-    overflow: hidden;
+    overflow: visible;
     border-top: 1px dashed #dcd0ed;
 }
 
@@ -700,6 +700,7 @@ button:disabled {
         margin-top: 0;
         padding-top: 0;
         opacity: 0;
+        clip-path: inset(50% 0 50% 0);
         transform: scaleY(0.96);
         transform-origin: center;
     }
@@ -707,6 +708,7 @@ button:disabled {
     to {
         max-height: 1600px;
         opacity: 1;
+        clip-path: inset(0 0 0 0);
         transform: scaleY(1);
         transform-origin: center;
     }
